@@ -19,7 +19,7 @@
 
 Vous trouverez dans ce dossier une page HTML nommée **index.html**. Cette page contient quelques images, une série de portraits que nous aimerions mettre en page de manière originale.
 
-Le rendu final désiré est le suivant : [**TODO** insérer image](#).
+Le rendu final désiré est le suivant : ![rendu final](./rendu.png).
 
 Tous les styles ont déjà été écris, mais les sélecteurs ont disparus.  
 Sur base des indications contenus dans la feuille de styles, rendez à la page le *look* désiré.
