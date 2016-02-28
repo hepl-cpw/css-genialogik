@@ -1,0 +1,333 @@
+/* hepl-cpw/css-genialogik
+ * Genialogik, une histoire de famille.
+ *
+ * /css/styles.css - Main stylesheet
+ *
+ * NOTE: les styles à compléter commencent à la ligne 48
+ */
+
+/* micro-reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* fonts */
+/* "Amatic SC" */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://fonts.gstatic.com/s/amaticsc/v8/IDnkRTPGcrSVo50UyYNK74joYw3YTyktCCer_ilOlhE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://fonts.gstatic.com/s/amaticsc/v8/IDnkRTPGcrSVo50UyYNK7xampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* "Gloria Hallelujah" */
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url(http://fonts.gstatic.com/s/gloriahallelujah/v8/CA1k7SlXcY5kvI81M_R28YGdvEu4SOXaLqFXyFUihk4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* "Permanent Marker" */
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker'), local('PermanentMarker'), url(http://fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMio-5Z6V1O0VBgfXWFfbB4c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* main styles */
+/* l'exercice commence ici. */
+
+/* ciblez la balise "racine" de notre document */ {
+    background: transparent url( ../images/bcg.png ) top left repeat;
+    font: normal 62.5%/1.5 Verdana, Arial, sans-serif;
+    color: black;
+}
+
+/* ciblez tous les liens */ {
+    color: #c30;
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+/* ciblez tous les liens, lorsqu'ils sont survolés */ {
+    color: #03c;
+    text-decoration: underline;
+}
+
+/* ciblez la balise qui sert à signaler le contenu principal de notre document */ {
+    width: 960px;
+    margin: 50px auto;
+}
+
+/* ciblez la balise header dans le sélecteur précédent */ {
+    margin: 0 auto 25px;
+}
+
+/* ciblez les titres de niveau 1 qui ont un attribut role dont la valeur est "heading" */ {
+    font: normal 4.8rem "Gloria Hallelujah";
+    color: rgba( 0, 0, 0, .5 );
+    text-align: center;
+}
+
+/* ciblez les balises em dans le sélecteur précédent */ {
+    display: block;
+    font: normal 2.4rem "Permanent Marker";
+    color: rgba( 0, 0, 0, .75 );
+    transform: rotate( -8deg );
+}
+
+/* ciblez les balises small dans les titres de niveau 1 */ {
+    display: block;
+    font: normal 1.8rem "Gloria Hallelujah";
+    color: rgba( 0, 0, 0, .33 );
+}
+
+/* ciblez l'élément dont l'id est "trombino" */ {
+    margin: 0 auto 7.5rem;
+}
+
+/* ciblez les titres de niveau 2 dans le sélecteur précédent */ {
+    display: none;
+}
+
+/* ciblez les listes non-ordonnées dans le sélecteur précédent */ {
+    list-style: none;
+}
+
+/* ciblez les éléments de liste */ {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    transform-origin: top center;
+    transition: transform .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+/* ciblez les éléments de liste lorsqu'ils sont survolés */ {
+    transform: rotate( 3deg ) !important;
+}
+
+/* ciblez les balises figure */ {
+    position: relative;
+}
+
+/* ciblez les balises qui servent à marquer les légendes d'une figure */ {
+    display: none;
+}
+
+/* ciblez les pseudo-éléments qui apparaîtront après les figures */ {
+    content: "";
+    position: absolute;
+}
+
+/* ciblez le premier élément de liste */ {
+    position: relative;
+    transform: rotate( -3deg );
+}
+
+/* ciblez le pseudo-élément qui viendra après le figure contenu dans le précédent sélecteur */ {
+    width: 20.8rem;
+    height: 22.8rem;
+    top: -4rem;
+    left: -2.9rem;
+    background: transparent url( ../images/averell-frame.png ) center no-repeat;
+}
+
+/* ciblez le deuxième élément de liste */ {
+    float: right;
+    width: 12.5rem;
+    height: 15rem;
+    margin: -8.5rem auto 0;
+}
+
+/* ciblez le figure dans le sélecteur précédent */ {
+    overflow: hidden;
+}
+
+/* ciblez le pseudo-élement qui viendra après le second élément de liste */ {
+    content: "";
+    position: absolute;
+    width: 16rem;
+    height: 22.8rem;
+    top: -4.8rem;
+    left: -1.75rem;
+    background: transparent url( ../images/barnaby-frame.png ) center no-repeat;
+}
+
+/* ciblez l'image à l'intérieur du figure lui-même à l'intérieur du second élément de liste */ {
+    margin-left: -1.25rem;
+}
+
+/* ciblez l'élément de liste qui suit le second élément de liste */ {
+    top: 15rem;
+    left: -10rem;
+}
+
+/* ciblez le pseudo-élément qui vient après le sélecteur précédent */ {
+    width: 20.2rem;
+    height: 27.5rem;
+    top: -6.1rem;
+    left: -2.55rem;
+    background: transparent url( ../images/djenaye-frame.png ) center no-repeat;
+}
+
+/* ciblez l'image à l'intérieur du figure de l'élément de liste qui suit le second élément de liste */ {
+    border-radius: 20rem / 18rem;
+}
+
+/* ciblez les éléments de liste dont l'ordre est un multiple de 4 */ {
+    position: relative;
+    margin: 0 0 0 95%;
+    transform: rotate( 5deg );
+}
+
+/* ciblez le pseudo-élément qui viendra après le sélecteur précédent */ {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 13.9rem;
+    height: 18.2rem;
+    top: -1.4rem;
+    left: -1.9rem;
+    background: transparent url( ../images/dowenn-onil-frame.png ) center no-repeat;
+}
+
+/* ciblez les figure des éléments de liste dont l'ordre est un multiple de 4 */ {
+    width: 11rem;
+    height: 15rem;
+    overflow: hidden;
+}
+
+/* ciblez images des éléments de liste dont l'ordre est un multiple de 4 */ {
+    margin-left: -2.35rem;
+}
+
+/* ciblez l'élément dont l'id est "harpo" (en utilisant un selecteur d'attribut) */ {
+    width: 40rem;
+    height: 40rem;
+    margin: -24rem auto 0;
+}
+
+/* ciblez le pseudo-élément qui viendra après le figure contenu dans le sélecteur précédent */ {
+    width: 67.2rem;
+    height: 75.1rem;
+    top: -17.6rem;
+    left: -13.6rem;
+    background: transparent url( ../images/harpo-frame.png ) center no-repeat;
+}
+
+/* ciblez les images de l'élément d'id harpo (toujours avec un sélecteur d'attribut pour l'id) */ {
+    border-radius: 100%;
+}
+
+/* ciblez l'élément dont la classe est "sixth" */ {
+    position: relative;
+    margin: 2rem 0 0 -2.5rem;
+    transform: rotate( -8deg );
+}
+
+/* ciblez le pseudo-élément qui viendra après le sélecteur précédent */ {
+    content: "";
+    position: absolute;
+    width: 22.9rem;
+    height: 23.5rem;
+    top: -6.5rem;
+    left: -4rem;
+    background: transparent url( ../images/gordon-blue-frame.png ) center no-repeat;
+}
+
+/* ciblez l'élément figure de l'élément dont la classe est "sixth" */ {
+    height: 11rem;
+    overflow: hidden;
+}
+
+/* ciblez l'image contenue dans le sélecteur précédent */ {
+    margin-top: -2.25rem;
+}
+
+/* ciblez l'élément de liste qui n'a pas de classe "alive" */ {
+    position: absolute;
+    top: 77rem;
+    right: 17.5rem;
+}
+
+/* ciblez le pseudo-élément qui viendra après le figure contenu dans le sélecteur précédent */ {
+    width: 22.9rem;
+    height: 23.5rem;
+    top: -4rem;
+    left: -4rem;
+    background: transparent url( ../images/kurtis-frame.png ) center no-repeat;
+    -webkit-filter: grayscale( 66% );
+    -moz-filter: grayscale( 66% );
+    filter: grayscale( 66% );
+}
+
+/* ciblez l'image contenue dans l'élément de liste qui n'a pas de classe "alive" */ {
+    -webkit-filter: grayscale( 100% );
+    -moz-filter: grayscale( 100% );
+    filter: grayscale( 100% );
+    transform: rotate( 180deg );
+}
+
+/* ciblez l'élément qui a la classe "alive" et la classe "eighth" */ {
+    margin-left: 75%;
+    transform: rotate( 2.5deg );
+}
+
+/* ciblez le dernier élément de liste */ {
+    margin: -12.5rem 0 0 18.5rem;
+}
+
+/* ciblez le pseudo-élément qui viendra après le figure contenu dans le dernier élément de liste */ {
+    width: 19.2rem;
+    height: 19.2rem;
+    top: -2rem;
+    left: -2rem;
+    background: transparent url( ../images/peyton-frame.png ) center no-repeat;
+}
+
+/* ciblez l'élément qui a la classe "notes" */ {
+    margin: 0 auto 5rem;
+}
+
+/* ciblez le pseudo-élément qui viendra avant le sélecteur précédent */ {
+    content: "";
+    display: block;
+    width: 100%;
+    height: .2rem;
+    margin: 0 auto 2rem;
+    background: rgba( 0, 0, 0, .5 );
+}
+
+/* ciblez les titres de niveau 2 contenu dans l'élément qui a la classe "notes" */ {
+    margin: 0 auto 1.2rem;
+    font: normal 4.2rem "Permanent Marker";
+    color: rgba( 0, 0, 0, .75 );
+    text-align: center;
+}
+
+/* ciblez les paragraphes contenus dans une section qui suit une autre section */ {
+    font: normal 3.2rem "Amatic SC";
+    color: brown;
+}
+
+/* ciblez le pied de page */ {
+    padding-top: 2.5rem;
+    border-top: 1px solid gray;
+}
+
+/* ciblez les paragraphes dans le pied de page */ {
+    margin: 0 auto 1rem;
+    font: normal 1.2rem Verdana, Arial, sans-serif;
+    text-align: right;
+}
