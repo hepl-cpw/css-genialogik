@@ -1,0 +1,333 @@
+/* hepl-cpw/css-genialogik
+ * Genialogik, une histoire de famille.
+ *
+ * /css/styles.css - Main stylesheet
+ *
+ * NOTE: les styles à compléter commencent à la ligne 48
+ */
+
+/* micro-reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* fonts */
+/* "Amatic SC" */
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://fonts.gstatic.com/s/amaticsc/v8/IDnkRTPGcrSVo50UyYNK74joYw3YTyktCCer_ilOlhE.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://fonts.gstatic.com/s/amaticsc/v8/IDnkRTPGcrSVo50UyYNK7xampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* "Gloria Hallelujah" */
+@font-face {
+  font-family: 'Gloria Hallelujah';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gloria Hallelujah'), local('GloriaHallelujah'), url(http://fonts.gstatic.com/s/gloriahallelujah/v8/CA1k7SlXcY5kvI81M_R28YGdvEu4SOXaLqFXyFUihk4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* "Permanent Marker" */
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker'), local('PermanentMarker'), url(http://fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMio-5Z6V1O0VBgfXWFfbB4c.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* main styles */
+/* l'exercice commence ici. */
+
+html {
+    background: transparent url( ../images/bcg.png ) top left repeat;
+    font: normal 62.5%/1.5 Verdana, Arial, sans-serif;
+    color: black;
+}
+
+a {
+    color: #c30;
+    text-decoration: none;
+    transition: color .25s ease-in-out;
+}
+
+a:hover {
+    color: #03c;
+    text-decoration: underline;
+}
+
+main {
+    width: 960px;
+    margin: 50px auto;
+}
+
+main header {
+    margin: 0 auto 25px;
+}
+
+h1[role="heading"] {
+    font: normal 4.8rem "Gloria Hallelujah";
+    color: rgba( 0, 0, 0, .5 );
+    text-align: center;
+}
+
+h1[role="heading"] em {
+    display: block;
+    font: normal 2.4rem "Permanent Marker";
+    color: rgba( 0, 0, 0, .75 );
+    transform: rotate( -8deg );
+}
+
+h1 small {
+    display: block;
+    font: normal 1.8rem "Gloria Hallelujah";
+    color: rgba( 0, 0, 0, .33 );
+}
+
+#trombino {
+    margin: 0 auto 7.5rem;
+}
+
+#trombino h2 {
+    display: none;
+}
+
+#trombino ul {
+    list-style: none;
+}
+
+li {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    transform-origin: top center;
+    transition: transform .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+li:hover {
+    transform: rotate( 3deg ) !important;
+}
+
+figure {
+    position: relative;
+}
+
+figure figcaption {
+    display: none;
+}
+
+figure:after {
+    content: "";
+    position: absolute;
+}
+
+li:first-child {
+    position: relative;
+    transform: rotate( -3deg );
+}
+
+li:first-child figure:after {
+    width: 20.8rem;
+    height: 22.8rem;
+    top: -4rem;
+    left: -2.9rem;
+    background: transparent url( ../images/averell-frame.png ) center no-repeat;
+}
+
+li:nth-child(2) {
+    float: right;
+    width: 12.5rem;
+    height: 15rem;
+    margin: -8.5rem auto 0;
+}
+
+li:nth-child(2) figure {
+    overflow: hidden;
+}
+
+li:nth-child(2):after {
+    content: "";
+    position: absolute;
+    width: 16rem;
+    height: 22.8rem;
+    top: -4.8rem;
+    left: -1.75rem;
+    background: transparent url( ../images/barnaby-frame.png ) center no-repeat;
+}
+
+li:nth-child(2) figure img {
+    margin-left: -1.25rem;
+}
+
+li:nth-child(2) + li {
+    top: 15rem;
+    left: -10rem;
+}
+
+li:nth-child(2) + li figure:after {
+    width: 20.2rem;
+    height: 27.5rem;
+    top: -6.1rem;
+    left: -2.55rem;
+    background: transparent url( ../images/djenaye-frame.png ) center no-repeat;
+}
+
+li:nth-child(2) + li figure img {
+    border-radius: 20rem / 18rem;
+}
+
+li:nth-child(4n) {
+    position: relative;
+    margin: 0 0 0 95%;
+    transform: rotate( 5deg );
+}
+
+li:nth-child(4n):after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 13.9rem;
+    height: 18.2rem;
+    top: -1.4rem;
+    left: -1.9rem;
+    background: transparent url( ../images/dowenn-onil-frame.png ) center no-repeat;
+}
+
+li:nth-child(4n) figure {
+    width: 11rem;
+    height: 15rem;
+    overflow: hidden;
+}
+
+li:nth-child(4n) figure img {
+    margin-left: -2.35rem;
+}
+
+[id="harpo"] {
+    width: 40rem;
+    height: 40rem;
+    margin: -24rem auto 0;
+}
+
+[id="harpo"] figure:after {
+    width: 67.2rem;
+    height: 75.1rem;
+    top: -17.6rem;
+    left: -13.6rem;
+    background: transparent url( ../images/harpo-frame.png ) center no-repeat;
+}
+
+[id="harpo"] img {
+    border-radius: 100%;
+}
+
+.sixth {
+    position: relative;
+    margin: 2rem 0 0 -2.5rem;
+    transform: rotate( -8deg );
+}
+
+.sixth:after {
+    content: "";
+    position: absolute;
+    width: 22.9rem;
+    height: 23.5rem;
+    top: -6.5rem;
+    left: -4rem;
+    background: transparent url( ../images/gordon-blue-frame.png ) center no-repeat;
+}
+
+.sixth figure {
+    height: 11rem;
+    overflow: hidden;
+}
+
+.sixth figure img {
+    margin-top: -2.25rem;
+}
+
+li:not(.alive) {
+    position: absolute;
+    top: 77rem;
+    right: 17.5rem;
+}
+
+li:not(.alive) figure:after {
+    width: 22.9rem;
+    height: 23.5rem;
+    top: -4rem;
+    left: -4rem;
+    background: transparent url( ../images/kurtis-frame.png ) center no-repeat;
+    -webkit-filter: grayscale( 66% );
+    -moz-filter: grayscale( 66% );
+    filter: grayscale( 66% );
+}
+
+li:not(.alive) img {
+    -webkit-filter: grayscale( 100% );
+    -moz-filter: grayscale( 100% );
+    filter: grayscale( 100% );
+    transform: rotate( 180deg );
+}
+
+.alive.eighth {
+    margin-left: 75%;
+    transform: rotate( 2.5deg );
+}
+
+li:last-of-type {
+    margin: -12.5rem 0 0 18.5rem;
+}
+
+li:last-of-type figure:after {
+    width: 19.2rem;
+    height: 19.2rem;
+    top: -2rem;
+    left: -2rem;
+    background: transparent url( ../images/peyton-frame.png ) center no-repeat;
+}
+
+.notes {
+    margin: 0 auto 5rem;
+}
+
+.notes:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: .2rem;
+    margin: 0 auto 2rem;
+    background: rgba( 0, 0, 0, .5 );
+}
+
+.notes h2 {
+    margin: 0 auto 1.2rem;
+    font: normal 4.2rem "Permanent Marker";
+    color: rgba( 0, 0, 0, .75 );
+    text-align: center;
+}
+
+section + section p {
+    font: normal 3.2rem "Amatic SC";
+    color: brown;
+}
+
+footer {
+    padding-top: 2.5rem;
+    border-top: 1px solid gray;
+}
+
+footer p {
+    margin: 0 auto 1rem;
+    font: normal 1.2rem Verdana, Arial, sans-serif;
+    text-align: right;
+}
