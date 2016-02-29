@@ -101,7 +101,7 @@
     display: none;
 }
 
-/* ciblez les listes non-ordonnées dans le sélecteur précédent */ {
+/* ciblez les listes non-ordonnées dans l'élément dont l'id est "trombino" */ {
     list-style: none;
 }
 
@@ -173,7 +173,7 @@
     left: -10rem;
 }
 
-/* ciblez le pseudo-élément qui vient après le sélecteur précédent */ {
+/* ciblez le pseudo-élément qui vient après la figure dans le sélecteur précédent */ {
     width: 20.2rem;
     height: 27.5rem;
     top: -6.1rem;
